@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Product</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Apionic UI & UX</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">History</a></li>
+								<li><a href="elements.html">Elements</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>History</h2>
+								<p>Semua project yang sudah kami selesaikan.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Read Before You Buy</h3>
+									<p>Jika ingin memiliki desain menarik seperti berikut bisa hubungi kami, Bisa melalui media sosial kami atau dari  kontak yang ada di website ini. Hubungi kami untuk detail atau informasi lebih lanjut, kami siap membantu anda walaupun hanya bertanya.</p>
+
+
+									<p>Kami tidak hanya menyediakan UI & UX untuk website saja, kami juga menyediakan dalam bentuk logo, aplikasi, powerpoint, figma, dan masih banyak lagi. Jika anda memiliki tujuan anda sendiri namun masih bingung terhadap UI & UX yang ingin anda buat, hubungi kami </p>
+
+									
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.png" alt="" /></a>
+											<h3 class="major">Prototype Web</h3>
+											<p>Kita mendesain sebuah website menggunakan figma. klien membutuhkan prototype seperti instagram.</p>
+											<a href="https://www.figma.com/" class="special">Figma</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.png" alt="" /></a>
+											<h3 class="major">Mendesain Gerobak</h3>
+											<p>Kami mendesain sebuah gerobak dagang. klien membutuhkan sebuah desain yang menarik perhatian di gerobaknya</p>
+											<a href="https://www.adobe.com/" class="special">Adobe Photoshop & Corel Draw</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic06.png" alt="" /></a>
+											<h3 class="major">Web Interaktif</h3>
+											<p>Klien mengeluh terhadap webnya yang kurang interaktif dan desain.</p>
+											<a href="https://code.visualstudio.com/" class="special">Visual Studio Code</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic07.png" alt="" /></a>
+											<h3 class="major">Pembuatan Logo</h3>
+											<p>Klien membutuhkan logo untuk brand miliknya. kami mendesain logo yang menarik dan unik.</p>
+											<a href="https://www.coreldraw.com/" class="special">Coreldraw</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.png" alt="" /></a>
+											<h3 class="major">Pembuatan Aplikasi</h3>
+											<p>Costumer miminta desain aplikasi untuk android dan ios. Dimana didalamnya terdapat kakulator yang interaktif.</p>
+											<a href="https://developer.android.com/" class="special">Android Studio</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic10.jpeg" alt="" /></a>
+											<h3 class="major">UX Taskbar Website</h3>
+											<p>Costumer meminta taskbar dengan ux yang interaktif dan ui yang menarik.</p>
+											<a href="https://code.visualstudio.com/" class="special">Visual Studio Code</a>
+										</article>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<p id="quote"></p>
+						<script>
+							var quotes = [
+								"Punya pertanyaan? Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda!  ",
+								"Ingin tahu lebih lanjut tentang UX dan UI?  ",
+								"Buat website yang lebih baik dengan UX dan UI yang lebih baik!  ",
+								"Kami ingin mendengar dari Anda! Hubungi kami untuk pertanyaan atau saran.  ",
+								"Tim kami siap membantu Anda dalam membuat website yang lebih baik!  ",
+								"Kami di sini untuk Anda. Hubungi kami dan mari diskusikan kebutuhan Anda.  "
+							];
+							var counter = 0;
+							var text = "";
+							var index = 0;
+							var currentText = "";
+							var deleting = false;
+							var blink = false;
+							var timeoutId = null;
+							function blinkCursor() {
+								if (blink) {
+									document.getElementById("quote").innerHTML = text + "|";
+									blink = false;
+								} else {
+									document.getElementById("quote").innerHTML = text;
+									blink = true;
+								}
+								timeoutId = setTimeout(function() {
+									blinkCursor();
+								}, 500);
+							}
+							function typewrite() {
+								if (deleting) {
+									text = currentText.substring(0, index--);
+									if (index < 0) {
+										deleting = false;
+										counter = (counter + 1) % quotes.length;
+										currentText = quotes[counter];
+										text = "";
+										index = 0;
+										timeoutId = setTimeout(function() {
+											typewrite();
+										}, 50);
+										blinkCursor();
+									} else {
+										document.getElementById("quote").innerHTML = text + "|";
+										timeoutId = setTimeout(function() {
+											typewrite();
+										}, 50);
+									}
+								} else {
+									if (index >= currentText.length) {
+										timeoutId = setTimeout(function() {
+											deleting = true;
+											typewrite();
+										}, 5000);
+										blinkCursor();
+									} else {
+										text += currentText.charAt(index++);
+										document.getElementById("quote").innerHTML = text + "|";
+										timeoutId = setTimeout(function() {
+											typewrite();
+										}, 50);
+									}
+								}
+							}
+							typewrite();
+						</script>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+						<ul class="contact">
+							<li class="icon solid fa-home">
+								Apionic Inc, Jl. Pulerejo Kauman<br />
+								Selomartani, Kec. Kalasan<br />
+								Kabupaten Sleman, Daerah Istimewa Yogyakarta 55571
+							</li>
+							<li class="icon solid fa-phone">(+62) 821-1234-1234</li>
+							<li class="icon solid fa-envelope"><a href="#">apionic@gmail.com</a></li>
+							<li class="icon brands fa-twitter"><a href="#">twitter.com/Apionic-tld</a></li>
+							<li class="icon brands fa-facebook-f"><a href="#">facebook.com/Apionic-tld</a></li>
+							<li class="icon brands fa-instagram"><a href="#">instagram.com/Apionic-tld</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Apionic Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
